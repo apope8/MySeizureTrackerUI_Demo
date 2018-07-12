@@ -17,7 +17,7 @@ export class SeizureService {
     private http: HttpClient
   ){}
   
-  getCustomers (): Observable<Seizure[]> {
+  getSeizures (): Observable<Seizure[]> {
     return this.http.get<Seizure[]>(this.seizuresURL)
   }
 
