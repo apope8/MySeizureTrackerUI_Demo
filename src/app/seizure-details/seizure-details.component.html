@@ -1,3 +1,28 @@
-<p>
-  seizure-details works!
-</p>
+<h4>
+    <span class="badge badge-light">{{seizure.id}}</span>
+    -> {{seizure.seizureType}} 
+  </h4>
+  
+  <div [hidden]="submitted">
+    <form (ngSubmit)="update()" #detailSeizureForm="ngForm">
+      <div class="form-group">
+        <label for="seizureType">Seizure Type</label>
+        <input type="text" class="form-control" id="seizureType" required [(ngModel)] = "seizure.seizureType" name = "seizureType" #seizureType="ngModel">
+        <div [hidden] = "seizureType.valid || seizureType.pristine" class="alert alert-danger">
+            Seizure Type is Required
+        </div>
+      </div>
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+        <button type="submit" class="btn btn-dark" [disabled]="!detailCustomerForm.form.valid">Update</button>
+        <button class="btn btn-dark" (click)="delete()">Delete</button>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+      <p>{{message}}</p>
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-dark" (click)="goBack()">Back</button>
+      </div>
+  </div>
