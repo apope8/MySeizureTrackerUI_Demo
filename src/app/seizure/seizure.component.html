@@ -1,3 +1,4 @@
-<p>
-  seizure works!
-</p>
+<h5>All Seizures</h5>
+<div *ngFor="let seiz of Seizures">
+  <a [routerLink]="['/seizures', seiz.seizureDate]" style="color:black"><span class="badge badge-dark">{{seiz.seizureDate}}</span> -> {{ seiz.seizureType }}</a>
+</div>
