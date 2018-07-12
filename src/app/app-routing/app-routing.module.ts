@@ -1,10 +1,34 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { SeizureComponent } from '../seizure/seizure.component';
+import { AddSeizureComponent } from '../add-seizure/add-seizure.component';
+import { SeizureDetailsComponent } from '../seizure-details/seizure-details.component';
+
+
+const routes: Routes = [
+  {
+    path: 'seizures',
+    component: SeizureComponent
+  },
+  {
+    path: 'seizures/add',
+    component: AddSeizureComponent  
+  },
+  {  
+    path: 'seizures/:id',
+    component: SeizureDetailsComponent
+  },
+  {  
+    path: '',
+    redirectTo: 'seizures',
+    pathMatch: 'full'
+  },
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    RouterModule.forRoot(routes)
   ],
-  declarations: []
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }
