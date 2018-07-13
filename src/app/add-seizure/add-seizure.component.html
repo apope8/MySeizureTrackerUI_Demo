@@ -1,3 +1,24 @@
-<p>
-  add-seizure works!
-</p>
+<h3>Add New Seizure Record</h3>
+<div [hidden]="submitted">
+  <form #addSeizureForm="ngForm">
+    
+    <div class="form-group">
+      <label for="seizureType">Seizure Type</label>
+      <input type="text" class="form-control" id="seizureType" placeholder="Enter Seizure Type" 
+      required
+      [(ngModel)]="seiz.seizureType" name="seizureType" #seizureType="ngModel">
+      <div [hidden]="seizureType.valid || seizureType.pristine"
+           class="alert alert-danger">
+           seizureType Name is required
+      </div>
+    </div>
+
+<div [hidden]="!submitted">
+  <p>Submitted Successfully! ->
+    <span class="badge badge-light">{{Seizure.seizureType}}</span>
+  </p>
+  <div class="btn-group btn-group-sm">
+    <button class="btn btn-dark" (click)="goBack()">Back</button>
+    <button class="btn btn-dark" (click)="newSeizure(); addSeizureForm.reset()">Continue</button>
+  </div>
+</div>

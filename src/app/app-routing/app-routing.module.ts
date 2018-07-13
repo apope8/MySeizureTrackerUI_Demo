@@ -11,7 +11,7 @@ const routes: Routes = [
     component: SeizureComponent
   },
   {
-    path: 'seizures/add',
+    path: 'seizure/add',
     component: AddSeizureComponent  
   },
   {  
