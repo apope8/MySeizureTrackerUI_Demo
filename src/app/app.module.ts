@@ -10,13 +10,19 @@ import { SeizureDetailsComponent } from './seizure-details/seizure-details.compo
 import { AddSeizureComponent } from './add-seizure/add-seizure.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MedicationComponent } from './medication/medication.component';
+import { MedicationDetailsComponent } from './medication-details/medication-details.component';
+import { AddMedicationComponent } from './add-medication/add-medication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeizureComponent,
     SeizureDetailsComponent,
-    AddSeizureComponent
+    AddSeizureComponent,
+    MedicationComponent,
+    MedicationDetailsComponent,
+    AddMedicationComponent
   ],
   imports: [
     BrowserModule,
