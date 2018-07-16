@@ -19,7 +19,7 @@
 
     <div class="form-group">
       <label for="dosage">Dosage</label>
-      <input type="text" class="form-control" id="dateFieldHtml5" required [(ngModel)]="medication.dosage" name="dosage" #dosage="ngModel">
+      <input type="text" class="form-control" id="dosage" required [(ngModel)]="medication.dosage" name="dosage" #dosage="ngModel">
       <div [hidden]="dosage.valid || dosage.pristine" class="alert alert-danger">
         Dosage is Required
       </div>

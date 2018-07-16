@@ -4,7 +4,7 @@
 
       <div class="form-group">
         <label for="seizureType">Seizure Type</label>
-        <input type="text" class="form-control" id="seizureType" 
+        <input type="text" class="form-control" id="seizureType"
         required
         [(ngModel)]="seiz.seizureType" name="seizureType" #seizureType="ngModel">
         <div [hidden]="seizureType.valid || seizureType.pristine"
@@ -15,7 +15,7 @@
 
       <div class="form-group">
           <label for="seizureDate">Seizure Date</label>
-          <input type="text" class="form-control" id="seizureDate" 
+          <input type="date" class="form-control" id="seizureDate"
           required
           [(ngModel)]="seiz.seizureDate" name="seizureDate" #seizureDate="ngModel">
           <div [hidden]="seizureDate.valid || seizureDate.pristine"
@@ -26,7 +26,7 @@
 
         <div class="form-group">
           <label for="timeOfDay">Time Of Day</label>
-          <input type="text" class="form-control" id="timeOfDay" 
+          <input type="text" class="form-control" id="timeOfDay"
           required
           [(ngModel)]="seiz.timeOfDay" name="timeOfDay" #timeOfDay="ngModel">
           <div [hidden]="timeOfDay.valid || timeOfDay.pristine"
@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="trigger">Trigger</label>
-            <input type="text" class="form-control" id="trigger" 
+            <input type="text" class="form-control" id="trigger"
             required
             [(ngModel)]="seiz.trigger" name="trigger" #trigger="ngModel">
             <div [hidden]="trigger.valid || trigger.pristine"
@@ -48,7 +48,7 @@
 
           <div class="form-group">
               <label for="description">Description</label>
-              <textarea type="text" class="form-control" id="description" 
+              <textarea type="text" class="form-control" id="description"
               required
               [(ngModel)]="seiz.description" name="description" #description="ngModel"></textarea>
               <div [hidden]="description.valid || description.pristine"
@@ -56,8 +56,8 @@
                   Description is required
               </div>
             </div>
-      
-      
+
+
       <div class="btn-group btn-group-sm">
       	<button class="btn btn-dark" (click)="goBack()">Back</button>
       	<button class="btn btn-dark" (click)="addSeizure()" [disabled]="!addSeizureForm.form.valid">Add</button>
