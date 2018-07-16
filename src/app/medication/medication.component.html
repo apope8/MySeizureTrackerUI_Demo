@@ -1,11 +1,11 @@
 <h5>All Medication Records</h5>
-<div *ngFor="let med of Medication">
-  <a [routerLink]="['/medications', med.id]" 
+<div *ngFor="let med of medication">
+  <a [routerLink]="['/medications', med.id]"
   style="color:black">
     <span class="badge badge-dark">
       {{med.id}}
     </span>
-     -> {{ med.seizureType }}
+     -> {{ med.medicationName }}
     </a>
 </div>
 

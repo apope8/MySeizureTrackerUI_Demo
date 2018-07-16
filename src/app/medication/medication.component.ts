@@ -10,11 +10,11 @@ import { MedicationService } from '../medication.service';
 
 export class MedicationComponent implements OnInit {
 
-  medication : Medication[];
+  medication: Medication[];
 
   constructor(private medicationService: MedicationService) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getMedications();
   }
 
@@ -23,7 +23,7 @@ export class MedicationComponent implements OnInit {
     .subscribe(
       Medication => {
         console.log(Medication);
-        this.medication = Medication
+        this.medication = Medication;
       }
     );
   }

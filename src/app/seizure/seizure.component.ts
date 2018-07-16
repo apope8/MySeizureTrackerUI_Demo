@@ -9,21 +9,21 @@ import { SeizureService } from '../seizure.service';
 })
 
 export class SeizureComponent  implements OnInit {
- 
+
   Seizures: Seizure[];
- 
-  constructor(private SeizureService: SeizureService) {}
- 
+
+  constructor(private seizureService: SeizureService) {}
+
   ngOnInit(): void {
      this.getSeizures();
   }
- 
+
   getSeizures() {
-    return this.SeizureService.getSeizures()
+    return this.seizureService.getSeizures()
                .subscribe(
                  Seizures => {
                   console.log(Seizures);
-                  this.Seizures = Seizures
+                  this.Seizures = Seizures;
                  }
                 );
  }
