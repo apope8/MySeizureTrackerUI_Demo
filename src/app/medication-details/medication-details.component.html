@@ -1,3 +1,38 @@
-<p>
-  medication-details works!
-</p>
+<h4>
+  <span class="badge badge-light ">
+    {{medication.id}}
+  </span>
+  -> {{medication.medicationName}}
+</h4>
+
+<div [hidden]="submitted">
+
+  <form (ngSubmit)="update()" #medicationDetailsForm="ngForm">
+
+    <div class="form-group">
+      <label for="medicationName">Medication Name</label>
+      <input type="text" class="form-control" id="medicationName" required [(ngModel)]="medication.medicationName" name="medicationName" #medicationName="ngModel">
+      <div [hidden]="medicationName.valid || medicationName.pristine" class="alert alert-danger">
+        Medication Name is Required
+      </div>
+    </div>
+
+
+
+
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+      <button type="button" class="btn btn-dark" [disabled]="!medicationDetailsForm.form.valid">Update</button>
+      <button class="btn btn-dark" (click)="delete()">Delete</button>
+    </div>
+
+  </form>
+
+</div>
+
+<div [hidden]="!submitted">
+  <p>{{message}}</p>
+  <div class="btn-group btn-group-sm">
+    <button class="btn btn-dark" (click)="goBack()">Back</button>
+  </div>
+</div>
