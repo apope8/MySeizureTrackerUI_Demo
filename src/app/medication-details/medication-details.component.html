@@ -17,6 +17,32 @@
       </div>
     </div>
 
+    <div class="form-group">
+      <label for="dosage">Dosage</label>
+      <input type="text" class="form-control" id="dateFieldHtml5" required [(ngModel)]="medication.dosage" name="dosage" #dosage="ngModel">
+      <div [hidden]="dosage.valid || dosage.pristine" class="alert alert-danger">
+        Dosage is Required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input type="text"  class="form-control" id="startDate" required [(ngModel)]="medication.startDate" name="startDate" #startDate="ngModel">
+      <div [hidden]="startDate.valid || startDate.pristine" class="alert alert-danger">
+        Start Date is Required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date</label>
+      <input type="text"  class="form-control" id="endDate" required [(ngModel)]="medication.endDate" name="endDate" #endDate="ngModel">
+      <div [hidden]="endDate.valid || endDate.pristine" class="alert alert-danger">
+        End Date is Required
+      </div>
+    </div>
+
+
+
 
 
 
