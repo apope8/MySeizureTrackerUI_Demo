@@ -39,24 +39,26 @@
 
     <div class="form-group">
       <label for="description">Seizure Description</label>
-      <textarea type="text" class="form-control" id="description" required [(ngModel)]="seizure.description" 
-      name="description" #description="ngModel"></textarea>
+      <textarea type="text" class="form-control" id="description" required [(ngModel)]="seizure.description" name="description"
+        #description="ngModel"></textarea>
       <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
         Seizure Description is Required
       </div>
     </div>
 
-  
+
 
     <div class="btn-group btn-group-sm">
       <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
       <button type="submit" class="btn btn-dark" [disabled]="!detailSeizureForm.form.valid">Update</button>
       <button class="btn btn-dark" (click)="delete()">Delete</button>
     </div>
+  </form>
+</div>
 
-    <div [hidden]="!submitted">
-      <p>{{message}}</p>
-      <div class="btn-group btn-group-sm">
-        <button class="btn btn-dark" (click)="goBack()">Back</button>
-      </div>
-    </div>
+<div [hidden]="!submitted">
+  <p>{{message}}</p>
+  <div class="btn-group btn-group-sm">
+    <button class="btn btn-dark" (click)="goBack()">Back</button>
+  </div>
+</div>
