@@ -1,6 +1,7 @@
-<h5>All Seizures</h5>
+<h5>All Seizure Records</h5>
 <div *ngFor="let seiz of Seizures">
-  <a [routerLink]="['/seizures', seiz.id]" style="color:black">
+  <a [routerLink]="['/seizures', seiz.id]" 
+  style="color:black">
     <span class="badge badge-dark">
       {{seiz.id}}
     </span>
