@@ -24,23 +24,23 @@ export class SeizureDetailsComponent implements OnInit {
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.seizureSevice.getSeizure(id)
-    .subscribe(Seizure => this.seizure = Seizure);
+    .subscribe(seizure => this.seizure = seizure);
   }
 
   update(): void {
     this.submitted = true;
     this.seizureSevice.updateSeizure(this.seizure)
-    .subscribe(() => this.message = "Seizure Record has been updated");
+    .subscribe(() => this.message = 'Seizure Record has been updated');
   }
 
-  delete(): void{
+  delete(): void {
     this.submitted = true;
     this.seizureSevice.deleteSeizure(this.seizure.id)
-    .subscribe(()=> this.message = "Seizure Record has been Removed")
+    .subscribe(() => this.message = 'Seizure Record has been Removed');
   }
 
   goBack(): void {
-    this.location.back()
+    this.location.back();
   }
 
 }

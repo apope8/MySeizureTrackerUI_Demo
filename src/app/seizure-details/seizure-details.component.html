@@ -1,10 +1,14 @@
 <h4>
-  <span class="badge badge-light">{{seizure.id}}</span>
+  <span class="badge badge-light">
+    {{seizure.id}}
+  </span>
   -> {{seizure.seizureType}}
 </h4>
 
 <div [hidden]="submitted">
+
   <form (ngSubmit)="update()" #detailSeizureForm="ngForm">
+
     <div class="form-group">
       <label for="seizureType">Seizure Type</label>
       <input type="text" class="form-control" id="seizureType" required [(ngModel)]="seizure.seizureType" name="seizureType" #seizureType="ngModel">

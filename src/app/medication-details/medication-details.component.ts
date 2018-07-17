@@ -29,7 +29,7 @@ export class MedicationDetailsComponent implements OnInit {
 
   update(): void {
     this.submitted = true;
-    this.medicationService.updateMedication(this.medication.id)
+    this.medicationService.updateMedication(this.medication)
       .subscribe(() => this.message = 'Medication record has been updated');
   }
 

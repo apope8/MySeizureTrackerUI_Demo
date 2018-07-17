@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpHeaders, HttpClient } from '@angular/common/http';;
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Medication } from './medication';
 
@@ -16,8 +16,8 @@ export class MedicationService {
 
   constructor(private http: HttpClient) { }
 
-  getMedications (): Observable<Medication[]>{
-    return this.http.get<Medication[]>(this.medicationUrl)
+  getMedications (): Observable<Medication[]> {
+    return this.http.get<Medication[]>(this.medicationUrl);
   }
 
   getMedication(id: number): Observable<Medication> {
@@ -26,7 +26,7 @@ export class MedicationService {
   }
 
   addMedication (medication: Medication): Observable<Medication> {
-    return this.http.post<Medication>(this.medicationUrl, medication,httpOptions);
+    return this.http.post<Medication>(this.medicationUrl, medication, httpOptions);
   }
 
   deleteMedication (medication: Medication | number): Observable<Medication> {
@@ -36,13 +36,10 @@ export class MedicationService {
     return this.http.delete<Medication>(url, httpOptions);
   }
 
-  updateMedication(medication: Medication | number): Observable<any> {
-    const id = typeof medication === 'number' ? medication : medication.id;
-    const url = `${this.medicationUrl}/${id}`;
-
-    return this.http.put<Medication>(url, medication, httpOptions)
+  updateMedication(medication: Medication): Observable<any> {
+    return this.http.put(this.medicationUrl, medication, httpOptions);
   }
 
 
-  
+
 }
