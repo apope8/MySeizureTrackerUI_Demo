@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MedicationComponent } from './medication/medication.component';
 import { MedicationDetailsComponent } from './medication-details/medication-details.component';
 import { AddMedicationComponent } from './add-medication/add-medication.component';
+import { TypeChartService } from './type-chart.service';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AddMedicationComponent } from './add-medication/add-medication.componen
     AddSeizureComponent,
     MedicationComponent,
     MedicationDetailsComponent,
-    AddMedicationComponent
+    AddMedicationComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { AddMedicationComponent } from './add-medication/add-medication.componen
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [TypeChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

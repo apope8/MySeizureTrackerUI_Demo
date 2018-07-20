@@ -6,6 +6,7 @@ import { SeizureDetailsComponent } from '../seizure-details/seizure-details.comp
 import { MedicationComponent } from '../medication/medication.component';
 import { AddMedicationComponent } from '../add-medication/add-medication.component';
 import { MedicationDetailsComponent } from '../medication-details/medication-details.component';
+import { ChartsComponent } from '../charts/charts.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {  
     path: 'medications/:id',
     component: MedicationDetailsComponent
+  },
+  {
+    path:'charts',
+    component: ChartsComponent
   },
 ];
 
