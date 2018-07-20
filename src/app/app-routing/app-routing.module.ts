@@ -7,6 +7,8 @@ import { MedicationComponent } from '../medication/medication.component';
 import { AddMedicationComponent } from '../add-medication/add-medication.component';
 import { MedicationDetailsComponent } from '../medication-details/medication-details.component';
 import { ChartsComponent } from '../charts/charts.component';
+import { ChartTriggerComponent } from '../chart-trigger/chart-trigger.component';
+import { ChartTimeComponent } from '../chart-time/chart-time.component';
 
 
 const routes: Routes = [
@@ -40,8 +42,16 @@ const routes: Routes = [
     component: MedicationDetailsComponent
   },
   {
-    path:'charts',
+    path:'charts/type',
     component: ChartsComponent
+  },
+  {
+    path:'charts/trigger',
+    component: ChartTriggerComponent
+  },
+  {
+    path:'charts/time',
+    component: ChartTimeComponent
   },
 ];
 

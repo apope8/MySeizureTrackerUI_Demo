@@ -15,6 +15,8 @@ import { MedicationDetailsComponent } from './medication-details/medication-deta
 import { AddMedicationComponent } from './add-medication/add-medication.component';
 import { TypeChartService } from './type-chart.service';
 import { ChartsComponent } from './charts/charts.component';
+import { ChartTriggerComponent } from './chart-trigger/chart-trigger.component';
+import { ChartTimeComponent } from './chart-time/chart-time.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ChartsComponent } from './charts/charts.component';
     MedicationComponent,
     MedicationDetailsComponent,
     AddMedicationComponent,
-    ChartsComponent
+    ChartsComponent,
+    ChartTriggerComponent,
+    ChartTimeComponent
   ],
   imports: [
     BrowserModule,

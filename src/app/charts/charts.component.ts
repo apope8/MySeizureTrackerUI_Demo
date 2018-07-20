@@ -19,17 +19,17 @@ export class ChartsComponent implements OnInit {
     this._typeChart.typeChart()
       .subscribe(res => {
 
-        console.log(res)
-        //res = <Array<any>>res;
+        console.log(res);
+        // res = <Array<any>>res;
 
-        //let sType = res['seizureType'].map(res => res.Array.seizureType)
-        //let amount = res['Array'].map(res => res.Array.total)
+        // let sType = res['seizureType'].map(res => res.Array.seizureType)
+        // let amount = res['Array'].map(res => res.Array.total)
 
-        let myLabels = [];
-        let myData = [];
+        const myLabels = [];
+        const myData = [];
 
         Object.keys(res).forEach(function (key) {
-          let value = res[key];
+          const value = res[key];
           myLabels.push(value.seizureType);
           myData.push(value.total);
       });
@@ -46,21 +46,22 @@ export class ChartsComponent implements OnInit {
 
         }*/
 
-        console.log(myLabels)
-        console.log(myData)
+        console.log(myLabels);
+        console.log(myData);
 
 
         this.chart = new Chart('canvas', {
-          type: 'pie',
+          type: 'doughnut',
           data: {
             labels: myLabels,
             datasets: [
               {
-                data: myData
+                data: myData,
+                backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
               }
             ]
           }
-        })
+        });
 
         // this.chart = new Chart('canvas', {
         //   type: 'pie',
@@ -82,7 +83,6 @@ export class ChartsComponent implements OnInit {
         //           'rgb(0, 255, 0)',
         //           'rgb(0, 0, 255)'
         //         ],
-                
         //         borderWidth: 1,
         //         borderColor: '#777',
         //         hoverBorderWidth: 3,
@@ -115,6 +115,6 @@ export class ChartsComponent implements OnInit {
         //     }
         //   }
         // });
-      })
+      });
   }
 }
