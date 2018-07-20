@@ -20,18 +20,43 @@ export class ChartsComponent implements OnInit {
       .subscribe(res => {
 
         console.log(res)
+        //res = <Array<any>>res;
 
-        let sType = res['Array'].map(res => res.Array.seizureType)
-        let amount = res['Array'].map(res => res.Array.total)
+        //let sType = res['seizureType'].map(res => res.Array.seizureType)
+        //let amount = res['Array'].map(res => res.Array.total)
+
+        let myLabels = [];
+        let myData = [];
+
+        Object.keys(res).forEach(function (key) {
+          let value = res[key];
+          myLabels.push(value.seizureType);
+          myData.push(value.total);
+      });
+
+        /*for(let i=0; i<Array.from(res).length; i++){
+          console.log(res[i])
+          let newLabel = res[i].seizureType;
+          let newData = res[i].total;
+          myLabels.push(newLabel);
+          myData.push(newData);
+        }*/
+
+        /*for('seizureType' in res) {
+
+        }*/
+
+        console.log(myLabels)
+        console.log(myData)
 
 
         this.chart = new Chart('canvas', {
           type: 'pie',
           data: {
-            labels: sType,
+            labels: myLabels,
             datasets: [
               {
-                data: amount
+                data: myData
               }
             ]
           }
