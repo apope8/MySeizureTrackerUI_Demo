@@ -5,4 +5,5 @@ export class Seizure {
     "timeOfDay": string;
     "trigger": string;
     "description": string;
+    "total": number;
 }
