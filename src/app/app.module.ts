@@ -17,6 +17,9 @@ import { TypeChartService } from './type-chart.service';
 import { ChartsComponent } from './charts/charts.component';
 import { ChartTriggerComponent } from './chart-trigger/chart-trigger.component';
 import { ChartTimeComponent } from './chart-time/chart-time.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ChartTimeComponent } from './chart-time/chart-time.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [TypeChartService],
   bootstrap: [AppComponent]
