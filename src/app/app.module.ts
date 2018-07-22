@@ -42,7 +42,7 @@ import { AuthService } from './auth.service';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [TypeChartService, AuthService],
   bootstrap: [AppComponent]

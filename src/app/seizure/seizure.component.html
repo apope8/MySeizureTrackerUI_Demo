@@ -1,10 +1,27 @@
-<h5>All Seizure Records</h5>
+<mat-toolbar color="Foreground">
+  <span>All Seizure Records</span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
+      <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li>
+              <a routerLink ="/seizures/add">
+                <mat-icon class="icon">add</mat-icon>
+                <span  class="label">Add New Record</span>
+               </a>
+          </li>
+          <li>
+            <a routerLink ="/charts/type">
+                <mat-icon class="icon">pie_chart</mat-icon>
+                <span class="label">Charts</span>
+            </a>
+          </li>
+    </ul>
+  </div>
+</mat-toolbar>
 <div *ngFor="let seiz of Seizures">
-  <a [routerLink]="['/seizures', seiz.id]" 
-  style="color:black">
+  <a [routerLink]="['/seizures', seiz.id]" style="color:black">
     <span class="badge badge-dark">
       {{seiz.id}}
     </span>
-     -> {{ seiz.seizureType }}
-    </a>
+    -> {{ seiz.seizureType }}
+  </a>
 </div>

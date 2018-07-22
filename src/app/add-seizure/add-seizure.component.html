@@ -1,4 +1,22 @@
-
+<mat-toolbar color="Foreground">
+    <span>Add New Seizure Record</span>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+            <li>
+                <a routerLink ="/seizures">
+                  <mat-icon class="icon">list</mat-icon>
+                  <span  class="label">View Seizure Records</span>
+                 </a>
+            </li>
+            <li>
+              <a routerLink ="/charts/type">
+                  <mat-icon class="icon">pie_chart</mat-icon>
+                  <span class="label">Charts</span>
+              </a>
+            </li>
+      </ul>
+    </div>
+  </mat-toolbar>
 <h3>Add New Seizure Record</h3>
 <div [hidden]="submitted">
     <form #addSeizureForm="ngForm">
