@@ -8,12 +8,14 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   
   a {
     text-decoration: none;
-    color: white;
+    color: navy;
   }
   
-  a:hover,
+  a:hover{
+    color: black,
+  }
   a:active {
-    color: lightgray;
+    color: navy ;
   }
   
   .navigation-items {
@@ -39,4 +41,8 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     margin: 0;
     width: 85%;
     color: #000;
+  }
+
+  .card {
+    height: 80%;
   }
