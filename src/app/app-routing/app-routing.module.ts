@@ -9,6 +9,7 @@ import { MedicationDetailsComponent } from '../medication-details/medication-det
 import { ChartsComponent } from '../charts/charts.component';
 import { ChartTriggerComponent } from '../chart-trigger/chart-trigger.component';
 import { ChartTimeComponent } from '../chart-time/chart-time.component';
+import { LandingComponent } from '../landing/landing.component';
 
 
 const routes: Routes = [
@@ -26,8 +27,7 @@ const routes: Routes = [
   },
   {  
     path: '',
-    redirectTo: 'seizures',
-    pathMatch: 'full'
+    component: LandingComponent
   },
   {
     path: 'medications',

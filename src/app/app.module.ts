@@ -21,6 +21,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthService } from './auth.service';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AuthService } from './auth.service';
     AddMedicationComponent,
     ChartsComponent,
     ChartTriggerComponent,
-    ChartTimeComponent
+    ChartTimeComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
