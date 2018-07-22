@@ -40,3 +40,8 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     width: 85%;
     color: #000;
   }
+
+  #content {
+    width: 400px;
+    margin: 0 auto;
+}

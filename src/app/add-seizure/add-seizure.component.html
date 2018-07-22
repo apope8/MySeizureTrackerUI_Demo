@@ -17,6 +17,7 @@
       </ul>
     </div>
   </mat-toolbar>
+  <div class="container">
 <h3>Add New Seizure Record</h3>
 <div [hidden]="submitted">
     <form #addSeizureForm="ngForm">
@@ -90,4 +91,5 @@
     	<button class="btn btn-dark" (click)="goBack()">Back</button>
     	<button class="btn btn-dark" (click)="newSeizure(); addSeizureForm.reset()">Continue</button>
     </div>
+</div>
 </div>
