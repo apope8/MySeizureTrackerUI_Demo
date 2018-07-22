@@ -20,6 +20,7 @@ import { ChartTimeComponent } from './chart-time/chart-time.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [TypeChartService],
+  providers: [TypeChartService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
