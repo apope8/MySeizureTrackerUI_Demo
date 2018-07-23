@@ -1,4 +1,20 @@
-<h3> Add Medication Record</h3>
+<mat-toolbar color="Foreground">
+    <span>Add New Medication Record</span>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+            <li>
+                <a routerLink ="/medications">
+                  <mat-icon class="icon">list</mat-icon>
+                  <span  class="label">View Medication Records</span>
+                 </a>
+            </li>
+            <li>
+            </li>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+  <div class="container">
 
 <div [hidden]="submitted">
 
@@ -48,4 +64,5 @@
     <button class="btn btn-dark" (click)="goBack()">Back</button>
     <button class="btn btn-dark" (click)="newMedication(); addMedicationForm.reset()">Continue</button>
   </div>
+</div>
 </div>

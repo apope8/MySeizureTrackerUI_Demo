@@ -1,11 +1,25 @@
-<h5>All Medication Records</h5>
-<div *ngFor="let med of medication">
-  <a [routerLink]="['/medications', med.id]"
-  style="color:black">
-    <span class="badge badge-dark">
-      {{med.id}}
-    </span>
-     -> {{ med.medicationName }}
-    </a>
-</div>
+<mat-toolbar color="Foreground">
+  <span>All Medication Records</span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <li>
+        <a routerLink="/medications/add">
+          <mat-icon class="icon">add</mat-icon>
+          <span class="label">Add New Record</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
 
+<br>
+<div class="container">
+  <div *ngFor="let med of medication">
+    <a [routerLink]="['/medications', med.id]" style="color:black">
+      <span class="badge badge-dark">
+        {{med.id}}
+      </span>
+      -> {{ med.medicationName }}
+    </a>
+  </div>
+</div>
