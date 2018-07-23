@@ -6,10 +6,10 @@
           <mat-icon class="icon">input</mat-icon>
           <span class="label">Login</span>
         </a>
-        <a mat-list-item routerLink="/" *ngIf="auth.isAuthenticated()">
+        <!-- <a mat-list-item routerLink="/" *ngIf="auth.isAuthenticated()">
           <mat-icon class="icon">home</mat-icon>
           <span class="label">Home</span>
-        </a>
+        </a> -->
         <a mat-list-item routerLink="/seizures" *ngIf="auth.isAuthenticated()">
           <mat-icon class="icon">error_outline</mat-icon>
           <span class="label">Seizures</span>
@@ -44,12 +44,12 @@
                 <span class="label">Login</span>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a *ngIf="!auth.isAuthenticated()" routerLink="/">
                 <mat-icon class="icon">home</mat-icon>
                 <span class="label">Home</span>
               </a>
-            </li>
+            </li> -->
             <li>
               <a *ngIf="auth.isAuthenticated()" routerLink="/seizures">
                 <mat-icon class="icon">error_outline</mat-icon>
