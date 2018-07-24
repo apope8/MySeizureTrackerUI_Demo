@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MedicationService {
-  private medicationUrl = 'http://localhost:8080/medications';
+  private medicationUrl = 'https://mstrest.herokuapp.com/medications';
 
   constructor(private http: HttpClient) { }
 

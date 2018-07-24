@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SeizureService {
-  private seizuresURL = 'http://localhost:8080/seizures'; //URL to API
+  private seizuresURL = 'https://mstrest.herokuapp.com/seizures'; //URL to API
   
   constructor(
     private http: HttpClient
