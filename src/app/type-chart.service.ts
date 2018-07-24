@@ -22,7 +22,9 @@ export class TypeChartService {
       map(result => result)
     );
   }
-
+  /**
+   * Comment
+   */
   timeChart() {
     return this._http.get('https://mstrest.herokuapp.com/seizures/tod')
   }
