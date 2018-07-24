@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MedicationService {
-  private medicationUrl = 'https://mstrest.herokuapp.com/medications';
+  private medicationUrl = 'http://mstrest.herokuapp.com/medications';
 
   constructor(private http: HttpClient) { }
 
