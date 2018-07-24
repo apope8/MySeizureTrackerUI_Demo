@@ -1,6 +1,39 @@
-<p>
-  chart-time works!
-</p>
-<div *ngIf="chart">
-  <canvas id="canvas">{{ sTriggerChart }}</canvas>
+<mat-toolbar color="Foreground">
+  <span>Add New Seizure Record</span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <li>
+        <a routerLink="/seizures">
+          <mat-icon class="icon">list</mat-icon>
+          <span class="label">View Seizure Records</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/charts/type">
+          <mat-icon class="icon">add</mat-icon>
+          <span class="label">Add New Seizure Record</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
+
+
+<button mat-button [matMenuTriggerFor]="menu">Choose a Chart Type</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <a routerLink="/charts/type">Seizure Types</a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/charts/trigger">Seizure Triggers</a>
+  </button>
+  <button mat-menu-item>
+    <a routerLink="/charts/time">Seizure Time</a>
+  </button>
+</mat-menu>
+
+<div class="container">
+  <div *ngIf="chart" id="main">
+    <canvas id="canvas">{{ sTriggerChart }}</canvas>
+  </div>
 </div>

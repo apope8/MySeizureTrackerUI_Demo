@@ -1,68 +1,91 @@
-<h4>
-  <span class="badge badge-light">
-    {{seizure.id}}
-  </span>
-  -> {{seizure.seizureType}}
-</h4>
+<mat-toolbar color="Foreground">
+  <span>Edit Seizure Record</span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <li>
+        <a routerLink="/seizures/add">
+          <mat-icon class="icon">add</mat-icon>
+          <span class="label">Add New Record</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/charts/type">
+          <mat-icon class="icon">pie_chart</mat-icon>
+          <span class="label">Charts</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
 
-<div [hidden]="submitted">
 
-  <form (ngSubmit)="update()" #detailSeizureForm="ngForm">
+<div class="container">
+  <h4>
+    <span class="badge badge-light">
+      {{seizure.id}}
+    </span>
+    -> {{seizure.seizureType}}
+  </h4>
 
-    <div class="form-group">
-      <label for="seizureType">Seizure Type</label>
-      <input type="text" class="form-control" id="seizureType" required [(ngModel)]="seizure.seizureType" name="seizureType" #seizureType="ngModel">
-      <div [hidden]="seizureType.valid || seizureType.pristine" class="alert alert-danger">
-        Seizure Type is Required
+  <div [hidden]="submitted">
+
+    <form (ngSubmit)="update()" #detailSeizureForm="ngForm">
+
+      <div class="form-group">
+        <label for="seizureType">Seizure Type</label>
+        <input type="text" class="form-control" id="seizureType" required [(ngModel)]="seizure.seizureType" name="seizureType" #seizureType="ngModel">
+        <div [hidden]="seizureType.valid || seizureType.pristine" class="alert alert-danger">
+          Seizure Type is Required
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="seizureDate">Seizure Date</label>
-      <input type="text" class="form-control" id="seizureDate" required [(ngModel)]="seizure.seizureDate" name="seizureDate" #seizureDate="ngModel">
-      <div [hidden]="seizureDate.valid || seizureDate.pristine" class="alert alert-danger">
-        Seizure Date is Required
+      <div class="form-group">
+        <label for="seizureDate">Seizure Date</label>
+        <input type="text" class="form-control" id="seizureDate" required [(ngModel)]="seizure.seizureDate" name="seizureDate" #seizureDate="ngModel">
+        <div [hidden]="seizureDate.valid || seizureDate.pristine" class="alert alert-danger">
+          Seizure Date is Required
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="timeOfDay">Time Of Day</label>
-      <input type="text" class="form-control" id="timeOfDay" required [(ngModel)]="seizure.timeOfDay" name="timeOfDay" #timeOfDay="ngModel">
-      <div [hidden]="timeOfDay.valid || timeOfDay.pristine" class="alert alert-danger">
-        Time of Day is Required
+      <div class="form-group">
+        <label for="timeOfDay">Time Of Day</label>
+        <input type="text" class="form-control" id="timeOfDay" required [(ngModel)]="seizure.timeOfDay" name="timeOfDay" #timeOfDay="ngModel">
+        <div [hidden]="timeOfDay.valid || timeOfDay.pristine" class="alert alert-danger">
+          Time of Day is Required
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="trigger">Trigger</label>
-      <input type="text" class="form-control" id="trigger" required [(ngModel)]="seizure.trigger" name="trigger" #trigger="ngModel">
-      <div [hidden]="trigger.valid || trigger.pristine" class="alert alert-danger">
-        Trigger is Required
+      <div class="form-group">
+        <label for="trigger">Trigger</label>
+        <input type="text" class="form-control" id="trigger" required [(ngModel)]="seizure.trigger" name="trigger" #trigger="ngModel">
+        <div [hidden]="trigger.valid || trigger.pristine" class="alert alert-danger">
+          Trigger is Required
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="description">Seizure Description</label>
-      <textarea type="text" class="form-control" id="description" required [(ngModel)]="seizure.description" name="description"
-        #description="ngModel"></textarea>
-      <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-        Seizure Description is Required
+      <div class="form-group">
+        <label for="description">Seizure Description</label>
+        <textarea type="text" class="form-control" id="description" required [(ngModel)]="seizure.description" name="description"
+          #description="ngModel"></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+          Seizure Description is Required
+        </div>
       </div>
-    </div>
 
 
 
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+        <button type="submit" class="btn btn-dark" [disabled]="!detailSeizureForm.form.valid">Update</button>
+        <button class="btn btn-dark" (click)="delete()">Delete</button>
+      </div>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <p>{{message}}</p>
     <div class="btn-group btn-group-sm">
-      <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
-      <button type="submit" class="btn btn-dark" [disabled]="!detailSeizureForm.form.valid">Update</button>
-      <button class="btn btn-dark" (click)="delete()">Delete</button>
+      <button class="btn btn-dark" (click)="goBack()">Back</button>
     </div>
-  </form>
-</div>
-
-<div [hidden]="!submitted">
-  <p>{{message}}</p>
-  <div class="btn-group btn-group-sm">
-    <button class="btn btn-dark" (click)="goBack()">Back</button>
   </div>
 </div>

@@ -39,10 +39,35 @@ export class ChartTriggerComponent implements OnInit {
                   datasets: [
                     {
                       data: myData,
-                      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
+                      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#1A5276","#A04000"]
                     }
                   ]
-                }
+                },
+                options: {
+                  title: {
+                      display: true,
+                      text: 'Seizures by Triggers',
+                      fontSize: 25
+                  },
+                  legend: {
+                      display: true,
+                      position: 'right',
+                      labels: {
+                          fontColor: '#000'
+                      }
+                  },
+                  layout: {
+                      padding: {
+                          left: 50,
+                          right: 0,
+                          bottom: 0,
+                          top: 0
+                      }
+                  },
+                  tooltips:{
+                      enabled: true
+                  }
+              }
               });
         });
     }

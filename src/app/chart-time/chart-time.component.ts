@@ -42,7 +42,32 @@ export class ChartTimeComponent implements OnInit {
                   backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"]
                 }
               ]
-            }
+            },
+            options: {
+              title: {
+                  display: true,
+                  text: 'Seizures by Time of Day',
+                  fontSize: 25
+              },
+              legend: {
+                  display: true,
+                  position: 'right',
+                  labels: {
+                      fontColor: '#000'
+                  }
+              },
+              layout: {
+                  padding: {
+                      left: 50,
+                      right: 0,
+                      bottom: 0,
+                      top: 0
+                  }
+              },
+              tooltips:{
+                  enabled: true
+              }
+          }
           });
     });
 }
