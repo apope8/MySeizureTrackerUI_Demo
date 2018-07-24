@@ -11,7 +11,7 @@ export class AuthService {
     clientID: 'oRjcTqvs7cro0pLvtnJlVl0zdcAJe77B',
     domain: 'apope8.eu.auth0.com',
     responseType: 'token id_token',
-    redirectUri: 'http://localhost:4200/',
+    redirectUri: 'https://myseizuretracker.herokuapp.com/',
     scope: 'openid'
   });
 

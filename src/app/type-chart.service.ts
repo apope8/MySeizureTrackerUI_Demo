@@ -10,20 +10,20 @@ export class TypeChartService {
   constructor(private _http: HttpClient) { }
 
   typeChart() {
-    return this._http.get('http://mstrest.herokuapp.com/seizures/type')
+    return this._http.get('https://mstrest.herokuapp.com/seizures/type')
     .pipe(
       map(result => result)
     );
   }
 
   triggerChart() {
-    return this._http.get('http://mstrest.herokuapp.com/seizures/trigger')
+    return this._http.get('https://mstrest.herokuapp.com/seizures/trigger')
     .pipe(
       map(result => result)
     );
   }
 
   timeChart() {
-    return this._http.get('http://mstrest.herokuapp.com/seizures/tod')
+    return this._http.get('https://mstrest.herokuapp.com/seizures/tod')
   }
 }
