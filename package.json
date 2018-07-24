@@ -7,10 +7,14 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.6.8",
+    "@angular/cli": "~6.0.8",
+    "@angular/compiler-cli": "^6.0.3",
     "@angular/animations": "^6.0.3",
     "@angular/cdk": "^6.4.0",
     "@angular/common": "^6.0.3",
@@ -31,12 +35,11 @@
     "jquery": "^3.3.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.2",
+    "typescript": "~2.7.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
-    "@angular/cli": "~6.0.8",
-    "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
     "@types/auth0-js": "^8.11.2",
     "@types/jasmine": "~2.8.6",
@@ -54,5 +57,9 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
+  },
+  "engines": {
+    "node":"10.6.0",
+    "npm":"6.1.0"
   }
 }
