@@ -22,6 +22,7 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AuthService } from './auth.service';
 import { LandingComponent } from './landing/landing.component';
+import { AboutProjectComponent } from './about-project/about-project.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LandingComponent } from './landing/landing.component';
     ChartsComponent,
     ChartTriggerComponent,
     ChartTimeComponent,
-    LandingComponent
+    LandingComponent,
+    AboutProjectComponent
   ],
   imports: [
     BrowserModule,

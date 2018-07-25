@@ -10,6 +10,7 @@ import { ChartsComponent } from '../charts/charts.component';
 import { ChartTriggerComponent } from '../chart-trigger/chart-trigger.component';
 import { ChartTimeComponent } from '../chart-time/chart-time.component';
 import { LandingComponent } from '../landing/landing.component';
+import { AboutProjectComponent } from '../about-project/about-project.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path:'charts/time',
     component: ChartTimeComponent
+  },
+  {
+    path:'about',
+    component: AboutProjectComponent
   },
 ];
 
