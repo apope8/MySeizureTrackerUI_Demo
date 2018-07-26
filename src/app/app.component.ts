@@ -8,7 +8,14 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   // title = 'app';
+
+  showMenu = false;
+  
   constructor(public auth: AuthService){
     auth.handleAuthentication();
   }
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+ }
 }
