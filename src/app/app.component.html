@@ -7,7 +7,7 @@
       </a>
 
       <!--Dropdown Seizures Menu-->
-      <a mat-list-item (click)="toggleMenu()">
+      <a mat-list-item (click)="toggleMenu()" *ngIf="auth.isAuthenticated()">
         <mat-icon mat-list-icon>error_outline</mat-icon>Seizures
         <mat-icon *ngIf="!showMenu">chevron_right</mat-icon>
         <mat-icon *ngIf="showMenu">expand_more</mat-icon>
@@ -30,7 +30,7 @@
       </mat-nav-list>
       <!---->
       <!--Dropdown Medications Menu-->
-      <a mat-list-item (click)="toggleMenu()">
+      <a mat-list-item (click)="toggleMenu()" *ngIf="auth.isAuthenticated()">
         <mat-icon mat-list-icon>local_hospital</mat-icon>Medications
         <mat-icon *ngIf="!showMenu">chevron_right</mat-icon>
         <mat-icon *ngIf="showMenu">expand_more</mat-icon>
