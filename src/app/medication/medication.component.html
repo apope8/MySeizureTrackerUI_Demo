@@ -11,15 +11,16 @@
     </ul>
   </div>
 </mat-toolbar>
-
-<br>
-<div class="container">
-  <div *ngFor="let med of medication">
-    <a [routerLink]="['/medications', med.id]" style="color:black">
-      <span class="badge badge-dark">
-        {{med.id}}
-      </span>
-      -> {{ med.medicationName }}
-    </a>
+<main>
+  <hr>
+  <div class="container">
+    <div *ngFor="let med of medication">
+      <a [routerLink]="['/medications', med.id]" style="color:black">
+        <span class="badge badge-dark">
+          {{med.id}}
+        </span>
+        -> {{ med.medicationName }}
+      </a>
+    </div>
   </div>
-</div>
+</main>

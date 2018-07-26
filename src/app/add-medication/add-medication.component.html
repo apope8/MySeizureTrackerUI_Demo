@@ -1,68 +1,66 @@
 <mat-toolbar color="Foreground">
-    <span>Add New Medication Record</span>
-    <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
-        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-            <li>
-                <a routerLink ="/medications">
-                  <mat-icon class="icon">list</mat-icon>
-                  <span  class="label">View Medication Records</span>
-                 </a>
-            </li>
-            <li>
-            </li>
-      </ul>
-    </div>
-  </mat-toolbar>
+  <span>Add New Medication Record</span>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+      <li>
+        <a routerLink="/medications">
+          <mat-icon class="icon">list</mat-icon>
+          <span class="label">View Medication Records</span>
+        </a>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
 
-  <div class="container">
+<div class="container">
+  <h3>Enter Details Below</h3>
+  <div [hidden]="submitted">
 
-<div [hidden]="submitted">
+    <form #addMedicationForm="ngForm">
 
-  <form #addMedicationForm="ngForm">
+      <div class="form-group">
+        <label for="medicationName">Medication Name</label>
+        <input type="text" class="form-control" id="medicationName" placeholder="Medication Name..." required [(ngModel)]="medication.medicationName"
+          name="medicationName" #medicationName="ngModel">
+        <div [hidden]="medicationName.valid || medicationName.pristine" class="alert alert-danger"> Medication Name is Required</div>
+      </div>
 
-    <div class="form-group">
-      <label for="medicationName">Medication Name</label>
-      <input type="text" class="form-control" id="medicationName" placeholder="Medication Name..." required
-      [(ngModel)]="medication.medicationName" name="medicationName" #medicationName="ngModel">
-      <div [hidden]="medicationName.valid || medicationName.pristine" class="alert alert-danger"> Medication Name is Required</div>
-    </div>
-
-    <div  class="form-group">
-      <label for="dosage">Dosage</label>
-      <input type="text" class="form-control" id="dosage" placeholder="Dosage..." required
-             [(ngModel)]="medication.dosage" name="dosage" #dosage="ngModel">
-      <div [hidden]="dosage.valid || dosage.pristine" class="alert alert-danger"> Dosage is Required</div>
-    </div>
+      <div class="form-group">
+        <label for="dosage">Dosage</label>
+        <input type="text" class="form-control" id="dosage" placeholder="Dosage..." required [(ngModel)]="medication.dosage" name="dosage"
+          #dosage="ngModel">
+        <div [hidden]="dosage.valid || dosage.pristine" class="alert alert-danger"> Dosage is Required</div>
+      </div>
 
 
-    <div class="form-group">
-      <label for="startDate">Start Date</label>
-      <input type="date" class="form-control" id="startDate"  required
-             [(ngModel)]="medication.startDate" name="startDate" #startDate="ngModel">
-      <div [hidden]="startDate.valid || startDate.pristine" class="alert alert-danger"> Start Date is Required</div>
-    </div>
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" class="form-control" id="startDate" required [(ngModel)]="medication.startDate" name="startDate" #startDate="ngModel">
+        <div [hidden]="startDate.valid || startDate.pristine" class="alert alert-danger"> Start Date is Required</div>
+      </div>
 
-    <div class="form-group">
-      <label for="endDate">End Date</label>
-      <input type="date" class="form-control" id="endDate" required
-             [(ngModel)]="medication.endDate" name="endDate" #endDate="ngModel">
-      <div [hidden]="endDate.valid || endDate.pristine" class="alert alert-danger"> End Date is Required</div>
-    </div>
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" class="form-control" id="endDate" required [(ngModel)]="medication.endDate" name="endDate" #endDate="ngModel">
+        <div [hidden]="endDate.valid || endDate.pristine" class="alert alert-danger"> End Date is Required</div>
+      </div>
 
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-dark" (click)="goBack()">Back</button>
+        <button class="btn btn-dark" (click)="addMedication()" [disabled]="!addMedicationForm.form.valid">Add</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div [hidden]="!submitted">
+    <p>Medication Record Added!</p>
     <div class="btn-group btn-group-sm">
       <button class="btn btn-dark" (click)="goBack()">Back</button>
-      <button class="btn btn-dark" (click)="addMedication()" [disabled]="!addMedicationForm.form.valid">Add</button>
+      <button class="btn btn-dark" (click)="newMedication(); addMedicationForm.reset()">Continue</button>
     </div>
-
-  </form>
-
-</div>
-
-<div [hidden]="!submitted">
-  <p>Medication Record Added!</p>
-  <div class="btn-group btn-group-sm">
-    <button class="btn btn-dark" (click)="goBack()">Back</button>
-    <button class="btn btn-dark" (click)="newMedication(); addMedicationForm.reset()">Continue</button>
   </div>
-</div>
 </div>
