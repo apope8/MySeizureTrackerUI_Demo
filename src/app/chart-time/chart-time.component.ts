@@ -23,10 +23,10 @@ export class ChartTimeComponent implements OnInit {
         const myLabels = []
         const myData = []
 
-        Object.keys(res).forEach(function(key){
-            const value = res[key];
-            myLabels.push(value.timeOfDay);
-            myData.push(value.total);
+        Object.keys(res).forEach(function(key){         //creates an array passing in the data from the URL
+            const value = res[key];                    //assigns each value in the array to a variable called value
+            myLabels.push(value.timeOfDay);            //gets data in time of day
+            myData.push(value.total);                  //gets data in time of day
         });
 
         console.log(myLabels);
