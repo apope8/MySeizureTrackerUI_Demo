@@ -1,3 +1,7 @@
+/**
+ * This module holds all the dependencies required for the Angular Material Design
+ */
+
 import { NgModule } from '@angular/core';
 import {
     MatSidenavModule,
