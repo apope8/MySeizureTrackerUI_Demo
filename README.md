@@ -14,23 +14,23 @@ Currently this application is set to run on heroku and as such points at the Spr
 ### Seizure Service
 
 - Go to src/app/seizure.service.ts
-- Change seizuresURL from 'https://mstrest.herokuapp.com/seizures' to 'http://localhost:8080/seizures'
+- Change seizuresURL from `https://mstrest.herokuapp.com/seizures` to `http://localhost:8080/seizures`
 
 ### Medication Service
 
 - Go to src/app/medication.service.ts
-- Change medicationUrl from 'https://mstrest.herokuapp.com/medications' to 'http://localhost:8080/medications'
+- Change medicationUrl from `https://mstrest.herokuapp.com/medications` to `http://localhost:8080/medications`
 
 ### Charts Service
 
 - Go to src/app/type-chart.service.ts
 - There are 3 different URLs in this file
-- For each change 'mstrest.herokuapp.com' to 'localhost:8080'
+- For each change `mstrest.herokuapp.com` to `localhost:8080`
 
 ### Auth0 Service
 
 - Go to src/app/auth.service.ts
-- Change the redirectUri from 'https://myseizuretracker.herokuapp.com/' to 'http://localhost:4200/'
+- Change the redirectUri from `https://myseizuretracker.herokuapp.com/` to `http://localhost:4200/`
 
 
 
