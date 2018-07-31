@@ -1,6 +1,10 @@
 # My Seizure Tracker - Angular Client
 
+This application is an Angular Client built to be used with the "My Seizure Tracker" Spring Boot Rest Service.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+
 
 
 ## Running Locally
@@ -35,7 +39,7 @@ Currently this application is set to run on heroku and as such points at the Spr
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-<!--> ## Code scaffolding
+<!-- ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
