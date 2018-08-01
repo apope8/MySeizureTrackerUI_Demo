@@ -95,12 +95,6 @@
             </a>
           </li>
           <li>
-            <a *ngIf="auth.isAuthenticated()" (click)="auth.logout()">
-              <mat-icon class="icon">input</mat-icon>
-              <span class="label">LogOut</span>
-            </a>
-          </li>
-          <li>
             <a href="http://www.epilepsy.ie" target="_blank">
               <mat-icon class="icon">link</mat-icon>
               <span class="label">Epilepsy Ireland</span>
@@ -110,6 +104,12 @@
             <a routerLink="/about">
               <mat-icon class="icon">info</mat-icon>
               <span class="label">About</span>
+            </a>
+          </li>
+          <li>
+            <a *ngIf="auth.isAuthenticated()" (click)="auth.logout()">
+              <mat-icon class="icon">input</mat-icon>
+              <span class="label">LogOut</span>
             </a>
           </li>
         </ul>
